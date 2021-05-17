@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Camilla Shodieva](https://up.htmlacademy.ru/htmlcss/31/user/1573087).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 
 ---
 
