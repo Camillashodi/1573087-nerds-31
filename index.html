@@ -5,8 +5,135 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header>
+      <nav>
+        <a>
+          <img src="#" alt="Логотип студии Нёрдс" class="logo">
+        </a>
+        <ul>
+          <li><a href="blank.html">Студия</a></li>
+          <li><a href="blank.html">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+        <a href="blank.html">Корзина</a>
+      </nav>
+      <ul>
+        <li>
+          <!-- <p><img></p> Я думаю картинка в данном случае фон, а не контент, поэтому я не стала вставлять ее в разметку в слайдере -->
+          <p><b>Долго, дорого, скрупулезно.</b></p>
+          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <a href="blank.html" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+        </li>
+        <li>
+          <p><b>Любим математику как никто другой</b></p>
+          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+          <a href="blank.html" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+        </li>
+        <li>
+          <p><b>Только ночь, только хардкор</b></p>
+          <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+          <a href="blank.html" class="btn">УЗНАТЬ БОЛЬШЕ</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <h1 class="hidden">Дизайн-студия "Нёрдс"</h1>
+      <section class="our-services">
+        <h2 class="hidden">Предоставляемые услуги</h2>
+        <ul>
+          <li>
+            <h3>Веб-сайты</h3>
+            <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            <button type="button" class="btn">Заказать</button>
+          </li>
+          <li>
+            <h3>Приложения</h3>
+            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+            <button type="button" class="btn">Заказать</button>
+          </li>
+          <li>
+            <h3>Презентации</h3>
+            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+            <button type="button" class="btn">Заказать</button>
+          </li>
+        </ul>
+      </section>
+      <section class="company-desc">
+        <h2 class="hidden">О компании</h2>
+        <p><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+        <p>Выполняем заказы на разработку:</p><!-- Не знаю каким тегом лучше озоглавить список-->
+        <ul>
+          <li>Веб-сайтов любой сложности</li>
+          <li>Мобильных приложений для iOS и Android</li>
+          <li>Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+        <a><img src="#" alt="Логотип студии Нёрдс" class="colored-logo"><!--Это не похоже на контент скорее на фон --></a>
+        <p><b>с 2004 года Любим точность во всем:</b></p>
+        <ul>
+          <li>
+            <h3>146<sup>%</sup></h3>
+            <p>Уровень самоотдачи</p>
+          </li>
+          <li>
+            <h3>100<sup>%</sup></h3>
+            <p>Соблюдение сроков</p>
+          </li>
+          <li>
+            <h3>50<sup>%</sup></h3>
+            <p>Минимальная предоплата</p>
+          </li>
+        </ul>
+      </section>
+      <section class="projects">
+        <h2 class="hidden">Проекты студии</h2>
+        <ul>
+          <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="Логотип htmlacademy"></a></li>
+          <li><a href="blank.html"><img src="#" alt="Логотип BORODINSKI"></a></li>
+          <li><a href="blank.html"><img src="#" alt="Логотип PINK"></a></li>
+          <li><a href="blank.html"><img src="#" alt="Логотип MISHKA"></a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <section class="location">
+        <h2>Наш адрес</h2>
+        <!--Здесь будет карта-->
+        <p><b>NЁRDS DESIGN STUDIO</b></p>
+        <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <button type="button" class="btn">Напишите нам</button>
+      </section>
+      <section class="feedback">
+        <h2 class="hidden">Для связи с нами</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p><b>Напишите нам</b></p>
+          <button type="button">Закрыть</button>
+          <p>
+            <label for="name">Ваше имя:</label>
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="email">Ваш email:</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com ">
+          </p>
+          <p>
+            <label for="letter">Текст письма:</label>
+            <textarea name="letter" id="letter" cols="30" rows="10">В свободной форме</textarea>
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+      <section class="social">
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <ul>
+          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#">Фэйсбук</a></li>
+          <li><a href="#">Инстаграм</a></li>
+        </ul>
+      </section>
+    </footer>
   </body>
 </html>

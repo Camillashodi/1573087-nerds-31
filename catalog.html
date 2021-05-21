@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="#" alt="Логотип студии Нёрдс" class="logo">
+        </a>
+        <ul>
+          <li><a href="blank.html">Студия</a></li>
+          <li><a href="blank.html">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+        <a href="blank.html">Корзина</a>
+      </nav>
+      <h1>Магазин готовых шаблонов</h1>
+    </header>
+    <main>
+      <section class="search-settings">
+        <h2 class="hidden">Фильтр шаблонов</h2>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <input type="range" min="0" max="15000" name="priceRange" id="priceRange">
+            <label for="minPrice">от</label>
+            <input type="number" min="0" max="15000" id="minPrice" name="minPrice" placeholder="0">
+            <label for="maxPrice">до</label>
+            <input type="number" min="0" max="15000" id="maxPrice" name="maxPrice" placeholder="15000">
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input type="radio" name="net-choice-group" id="adapt-net" value="adapt" checked>
+                <label for="adapt-net">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" name="net-choice-group" id="fix-net" value="fix">
+                <label for="fix-net">Фиксированная</label>
+              </li>
+              <li>
+                <input type="radio" name="net-choice-group" id="stretch-net" value="stretch">
+                <label for="stretch-net">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="add-slider" id="add-slider" checked>
+                <label for="add-slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" name="add-advantages" id="add-advantages">
+                <label for="add-advantages">Блок преимуществ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="add-news" id="add-news" checked>
+                <label for="add-news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" name="add-galery" id="add-galery">
+                <label for="add-galery">Галерея</label>
+              </li>
+              <li>
+                <input type="checkbox" name="add-bascket" id="add-bascket">
+                <label for="add-bascket">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="btn">ПОКАЗАТЬ</button>
+        </form>
+      </section>
+      <section class="sorting">
+        <h2 class="hidden">Настройка сортировки</h2>
+        <ul>
+          <li><!-- Не знаю что здесь должно быть(кнопка? ссылка на эту же стр.?)-->По цене</li>
+          <li>По типу</li>
+          <li>По названию</li>
+        </ul>
+        <ul>
+          <li><!-- Не знаю что здесь должно быть(кнопка? ссылка на эту же стр.?)-->Сортировка с начала</li>
+          <li>Сортировка с конца</li>
+        </ul>
+      </section>
+      <section class="catalog">
+        <h2 class="hidden">Каталог готовых шаблонов</h2>
+        <ul>
+          <li>
+            <!-- Не совсем поняла куда поставить картинку, чтобы потом натянуть ее на всю карточку-->
+            <p><img src="#" alt="Готовый шаблон для сайта Sedona"></p>
+            <a href="blank.html">
+              <h3>Sedona</h3>
+            </a>
+            <p>Информационный сайт для туристов</p>
+            <button type="button" class="btn">9 900 ₽</button>
+          </li>
+          <li>
+            <p><img src="#" alt="Готовый шаблон для сайта Pink App"></p>
+            <a href="blank.html">
+              <h3>Pink App</h3>
+            </a>
+            <p>Продуктовый лендинг приложения для iOS и Android</p>
+            <button type="button" class="btn">9 900 ₽</button>
+          </li>
+          <li>
+            <p><img src="#" alt="Готовый шаблон для сайта Barbershop"></p>
+            <a href="blank.html">
+              <h3>Barbershop</h3>
+            </a>
+            <p>Сайт салона красоты. Для мужчин, да.</p>
+            <button type="button" class="btn">9 900 ₽</button>
+          </li>
+          <li>
+            <p><img src="#" alt="Готовый шаблон для сайта MISHKA"></p>
+            <a href="blank.html">
+              <h3>MISHKA</h3>
+            </a>
+            <p>Интернет-магазин вязаных игрушек</p>
+            <button type="button" class="btn">9 900 ₽</button>
+          </li>
+          <li>
+            <p><img src="#" alt="Готовый шаблон для сайта A Plus"></p>
+            <a href="blank.html">
+              <h3>A Plus</h3>
+            </a>
+            <p>Лендинг курсов повышения квалификации</p>
+            <button type="button" class="btn">9 900 ₽</button>
+          </li>
+          <li>
+            <p><img src="#" alt="Готовый шаблон для сайта КВАСТ"></p>
+            <a href="blank.html">
+              <h3>КВАСТ</h3>
+            </a>
+            <p>Промо-сайт производителя крафтового кваса</p>
+            <button type="button" class="btn">9 900 ₽</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a>1</a>
+          </li>
+          <li>
+            <a href="blank.html">2</a>
+          </li>
+          <li>
+            <a href="blank.html">3</a>
+          </li>
+          <li>
+            <a href="blank.html">Следующая</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <section class="location">
+        <h2>Наш адрес</h2>
+        <!--Здесь будет карта-->
+        <p><b>NЁRDS DESIGN STUDIO</b></p>
+        <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <button type="button" class="btn">Напишите нам</button>
+      </section>
+      <section class="feedback">
+        <h2 class="hidden">Для связи с нами</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p><b>Напишите нам</b></p>
+          <button type="button">Закрыть</button>
+          <p>
+            <label for="name">Ваше имя:</label>
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="email">Ваш email:</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com ">
+          </p>
+          <p>
+            <label for="letter">Текст письма:</label>
+            <textarea name="letter" id="letter" cols="30" rows="10">В свободной форме</textarea>
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+      <section class="social">
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <ul>
+          <li><a href="#" class="social-btn vk">Вконтакте</a></li>
+          <li><a href="#" class="social-btn fb">Фэйсбук</a></li>
+          <li><a href="#" class="social-btn inst">Инстаграм</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
