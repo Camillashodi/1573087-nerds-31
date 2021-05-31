@@ -10,8 +10,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src:local("Roboto"),
-        local("RobotoBold"), 
+    src:local("RobotoBold"), 
         url("../fonts/robotobold.woff2") format("woff2"),
         url("../fonts/robotobold.woff") format("woff");
         font-weight: bold;
@@ -20,8 +19,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src:local("Roboto"),
-        local("RobotoMedium"), 
+    src:local("RobotoMedium"), 
         url("../fonts/robotomedium.woff2") format("woff2"),
         url("../fonts/robotomedium.woff") format("woff");
         font-weight: 500;
