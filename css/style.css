@@ -61,6 +61,10 @@
     --social-active-btn: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
 }
 
+.page {
+    height: 100%;
+}
+
 .page-body {
     font-family: "Roboto", "Arial", sans-serif;
     margin: 0;
@@ -70,6 +74,10 @@
     font-weight: normal;
     color: var(--grafit, black);
     background-color: var(--white);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
 }
 
 .page-body a {
@@ -88,6 +96,12 @@
     height: 1px;
     margin: -1px;
 }
+
+.center {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 /*-----------------.btn-------------------------*/
 
 .btn {
@@ -100,6 +114,7 @@
     outline-style: none;
     border: none;
     border-radius: 3px;
+    white-space: nowrap;
 }
 
 .btn-red {
@@ -177,6 +192,12 @@
     text-transform: uppercase;
     color: var(--black, black);
     background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.main-logo {
+    justify-self: start;
 }
 
 .main-logo:hover,
@@ -191,6 +212,9 @@
 
 .site-nav {
     list-style: none;
+    justify-self: center;
+    padding: 0;
+    margin: 0;
 }
 
 .site-nav a,
@@ -202,6 +226,7 @@
     background-image: url("../img/basket-icon.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    justify-self: end;
 }
 
 .site-nav a:hover,
@@ -228,15 +253,32 @@
 /*-------------------.slider------------------------*/
 
 .slider {
-   background-color: var(--basic-gray, gray); 
+   background-color: var(--basic-gray, gray);
+   margin-bottom: 80px;
+}
+
+.slider p {
+    padding: 0;
+    margin: 0;
 }
 
 .slider-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .slider-item {
     text-align: left;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 430px;
+    background-position: 400px 0px;
+}
+
+.slider-wrapper {
+    grid-column: 1 / -2;
+    align-self: center;
 }
 
 .slider-item-work {
@@ -266,14 +308,24 @@
 
 .our-services {
     background-color: transparent;
+    border-bottom: 2px solid var(--basic-gray, gray);
+    padding-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .service-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    justify-content: start;
 }
 
 .service-item {
     text-align: left;
+    padding-top: 170px;
 }
 
 .service-item-web {
@@ -303,6 +355,15 @@
 
 .company-desc {
     background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(12, 60px);
+    gap: 40px;
+    justify-content: space-between;
+    padding-bottom: 73px;
+}
+
+.container-left {
+    grid-column: 1 / 8;
 }
 
 .container-left b {
@@ -319,11 +380,20 @@
 
 .ability-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .container-right {
     background-image: url("../img/illustrations/nerds-illustration.png");
     background-repeat: no-repeat;
+    grid-column: -1 / -5;
+    padding-top: 245px;
+}
+
+.container-right p {
+    padding: 0px;
+    margin: 0px;
 }
 
 .container-right > p {
@@ -339,6 +409,10 @@
 
 .statistic-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .statistic-item h3 {
@@ -346,6 +420,8 @@
     font-size: 45px;
     line-height: 64px;
     color: var(--black, black);
+    padding: 0;
+    margin: 0;
 }
 
 .statistic-item sup {
@@ -362,14 +438,46 @@
 
 .projects {
     background-color: transparent;
+    margin-bottom: 80px;
 }
 
 .project-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    justify-items: stretch;
+    border-top: 2px solid var(--basic-gray, gray);
+    border-bottom: 2px solid var(--basic-gray, gray);
+    padding: 45px 0;
+}
+
+.project-item {
+    position: relative;
+    display: grid;
+}
+
+.project-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 52px;
+    background-color: var(--basic-gray, gray);
+    right: 0px;
+    top: 18px;
 }
 
 .project-item a {
     opacity: 0.2;
+    display: block;
+    align-self: center;
+    justify-self: center;
+}
+
+.project-item img {
+    text-align: center;
 }
 
 .project-item a:focus,
@@ -393,8 +501,29 @@
 .footer-location {
     text-align: left;
     background-color: var(--white);
+    background-image: url("../img/map/map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 416px;
     color: var(--catalog-desc-gray, black);
     line-height: 18px;
+    margin-bottom: 68px;
+}
+
+.footer-location .center {
+    position: relative;
+}
+
+.footer-location .center::before {
+    content: "";
+    position: absolute;
+    width: 231px;
+    height: 190px;
+    background-color: transparent;
+    background-image: url("../img/map/map-marker.png");
+    /*Не понимаю как заставить изменять положение маркера вместе с фоном при изменении ширины окна*/
+    left: 60.8%;
+    top: 16.8%;
 }
 
 .footer-location b {
@@ -403,6 +532,22 @@
     line-height: 30px;
     color: var(--black, black);
     text-transform: uppercase;
+}
+
+.footer-location .center {
+    display: grid;
+    grid-template-columns: 319px 1fr;
+    grid-template-rows: 1fr;
+    min-height: 416px;
+}
+
+.adrr-wrapper {
+    box-sizing: border-box;
+    background-color: var(--white);
+    min-height: 308px;
+    align-self: center;
+    justify-content: start;
+    padding: 50px;
 }
 
 .footer-phone {
@@ -417,6 +562,14 @@
     color: var(--footer-gray, black);
     font-size: 16px;
     line-height: 22px;
+    padding-bottom: 68px;
+}
+
+.footer-social .center {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 1fr;
+    gap: 120px;
 }
 
 .footer-social h2 {
@@ -426,8 +579,14 @@
     line-height: 36px;
 }
 
+.footer-social .social-text {
+    grid-column: 2;
+}
+
 .social-list {
     list-style: none;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .social-btn {
@@ -526,6 +685,10 @@
 
 /*-------------------------------------.inner-page-------------------------------------*/
 
+.inner-page .main-header {
+    padding-bottom: 72px;
+}
+
 .inner-page .page-title {
     background-color: var(--basic-gray, gray);
     color: var(--black, black);
@@ -533,9 +696,28 @@
     font-weight: 500;
     line-height: 55px;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 108px;
+    margin-bottom: 55px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 140px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:"search-settings gap sorting"
+                        "search-settings gap catalog";
+    padding-bottom: 60px;
+}
+
+
+
 /*-----------------.search-settings----------------------*/
+
+.search-settings {
+    grid-area: search-settings;
+}
 
 .search-settings-form legend {
     text-transform: uppercase;
@@ -553,6 +735,8 @@
 .search-settings-form ul {
     list-style: none;
     line-height: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .price-filter input {
@@ -585,6 +769,10 @@
 /*---------------------.sorting-------------------------*/
 .sorting {
     color: var(--black, black);
+    grid-area: sorting;
+    display: grid;
+    gap: 47px;
+    grid-template-columns: auto 1fr auto;
 }
 
 .sorting-title {
@@ -593,10 +781,15 @@
     font-size: 18px;
     line-height: 30px;
     text-align: left;
+    grid-column: 1;
+    justify-self: start;
 }
 
 .sorting-list {
     list-style: none;
+    justify-self: end;
+    padding: 0;
+    margin: 0;
 }
 
 .sorting-item a {
@@ -621,8 +814,15 @@
 
 /*----------------------.catalog----------------------------*/
 
+.catalog {
+    grid-area: catalog;
+}
+
 .catalog-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 55px;
 }
 
 .catalog-item {
@@ -670,6 +870,8 @@
 
 .pagination {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .current-page {
