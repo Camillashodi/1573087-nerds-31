@@ -27,7 +27,7 @@
     </header>
     <main class="wrapper">
       <div class="center">
-        <h1>New page!</h1>
+        <h1 class="page-title">New page!</h1>
       </div>
     </main>
     <footer class="main-footer">
@@ -62,17 +62,17 @@
       <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
         <p class="feedback-plea"><b>Напишите нам</b></p>
         <button type="button" class="close-btn">Закрыть</button>
-        <p class="feedback-item">
+        <p class="feedback-item feedback-item-name">
           <label for="name">Ваше имя:</label>
           <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
         </p>
-        <p class="feedback-item">
+        <p class="feedback-item feedback-item-email">
           <label for="email">Ваш email:</label>
           <input type="email" name="email" id="email" placeholder="email@example.com"  required>
         </p>
-        <p class="feedback-item">
+        <p class="feedback-item feedback-item-letter">
           <label for="letter">Текст письма:</label>
-          <textarea name="letter" id="letter" cols="30" rows="10">В свободной форме</textarea>
+          <textarea name="letter" id="letter" cols="30" rows="5">В свободной форме</textarea>
         </p>
         <button type="submit" class="btn btn-red">Отправить</button>
       </form>

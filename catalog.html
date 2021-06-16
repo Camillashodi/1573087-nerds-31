@@ -33,25 +33,38 @@
           <form action="https://echo.htmlacademy.ru" method="POST" class="search-settings-form">
             <fieldset class="price-filter">
               <legend>Стоимость:</legend>
-              <input type="range" min="0" max="15000" name="priceRange" id="priceRange">
-              <label for="minPrice">от</label>
-              <input type="number" min="0" max="15000" id="minPrice" name="minPrice" placeholder="0">
-              <label for="maxPrice">до</label>
-              <input type="number" min="0" max="15000" id="maxPrice" name="maxPrice" placeholder="15000">
+              <!--              <input type="range" min="0" max="15000" name="priceRange" id="priceRange">-->
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="
+                    width: 45%;
+                    margin-left: 20%
+                    ">
+                      <div class="toggle toggle-min" tabindex="0"></div>
+                      <div class="toggle toggle-max" tabindex="0"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prince-controls">
+                  <label for="minPrice">от <input type="number" min="0" max="15000" id="minPrice" name="minPrice" placeholder="0" value="0"></label>
+                  <label for="maxPrice">до <input type="number" min="0" max="15000" id="maxPrice" name="maxPrice" placeholder="15000" value="15000"></label>
+                </div>
+              </div>
             </fieldset>
             <fieldset class="net-filter">
               <legend>Сетка:</legend>
               <ul class="radio-list">
                 <li class="radio-item">
-                  <input class="input-radio" type="radio" name="net-choice-group" id="adapt-net" value="adapt" checked>
+                  <input class="input-radio visually-hidden" type="radio" name="net-choice-group" id="adapt-net" value="adapt" checked>
                   <label for="adapt-net">Адаптивная</label>
                 </li>
                 <li class="radio-item">
-                  <input class="input-radio" type="radio" name="net-choice-group" id="fix-net" value="fix">
+                  <input class="input-radio visually-hidden" type="radio" name="net-choice-group" id="fix-net" value="fix">
                   <label for="fix-net">Фиксированная</label>
                 </li>
                 <li class="radio-item">
-                  <input class="input-radio" type="radio" name="net-choice-group" id="stretch-net" value="stretch">
+                  <input class="input-radio visually-hidden" type="radio" name="net-choice-group" id="stretch-net" value="stretch">
                   <label for="stretch-net">Резиновая</label>
                 </li>
               </ul>
@@ -60,23 +73,23 @@
               <legend>Особенности:</legend>
               <ul class="feature-list">
                 <li class="feature-item">
-                  <input class="input-checkbox" type="checkbox" name="add-slider" id="add-slider" checked>
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="add-slider" id="add-slider" checked>
                   <label for="add-slider">Слайдер</label>
                 </li>
                 <li class="feature-item">
-                  <input class="input-checkbox" type="checkbox" name="add-advantages" id="add-advantages">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="add-advantages" id="add-advantages">
                   <label for="add-advantages">Блок преимуществ</label>
                 </li>
                 <li class="feature-item">
-                  <input class="input-checkbox" type="checkbox" name="add-news" id="add-news" checked>
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="add-news" id="add-news" checked>
                   <label for="add-news">Новости</label>
                 </li>
                 <li class="feature-item">
-                  <input class="input-checkbox" type="checkbox" name="add-galery" id="add-galery">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="add-galery" id="add-galery">
                   <label for="add-galery">Галерея</label>
                 </li>
                 <li class="feature-item">
-                  <input class="input-checkbox" type="checkbox" name="add-bascket" id="add-bascket">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="add-bascket" id="add-bascket">
                   <label for="add-bascket">Корзина</label>
                 </li>
               </ul>
@@ -211,17 +224,17 @@
       <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
         <p class="feedback-plea"><b>Напишите нам</b></p>
         <button type="button" class="close-btn">Закрыть</button>
-        <p class="feedback-item">
+        <p class="feedback-item feedback-item-name">
           <label for="name">Ваше имя:</label>
           <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
         </p>
-        <p class="feedback-item">
+        <p class="feedback-item feedback-item-email">
           <label for="email">Ваш email:</label>
           <input type="email" name="email" id="email" placeholder="email@example.com"  required>
         </p>
-        <p class="feedback-item">
+        <p class="feedback-item feedback-item-letter">
           <label for="letter">Текст письма:</label>
-          <textarea name="letter" id="letter" cols="30" rows="10">В свободной форме</textarea>
+          <textarea name="letter" id="letter" cols="30" rows="5">В свободной форме</textarea>
         </p>
         <button type="submit" class="btn btn-red">Отправить</button>
       </form>
