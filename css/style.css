@@ -899,6 +899,7 @@
     bottom: auto;
     top: 166px;
     display: none;
+    z-index: 5;
 }
 
 .feedback-form {
