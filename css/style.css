@@ -123,6 +123,7 @@
     padding-top: 17px;
     padding-bottom: 15px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .btn-red {
@@ -242,6 +243,7 @@
 .card-link {
     color: var(--black, black);
     display: inline-block;
+    vertical-align: middle;
 }
 
 .card-link {
@@ -280,8 +282,8 @@
     opacity: 0.3;
 }
 
-.site-nav a:not([href]),
-.card-link:not([href]) {
+.site-nav .current-link,
+.card-link.current-link {
     border-bottom: 2px solid var(--red);
 }
 
@@ -331,7 +333,6 @@
     content: "";
     width: 760px;
     height: 431px;
-    filter: drop-shadow(0px 4px 4px var(--catalog-shadow));
     background-position: -5px 0px;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
@@ -351,7 +352,6 @@
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     align-self: center;
-    filter: none;
     z-index: 2;
 }
 
@@ -713,6 +713,18 @@
     color: var(--catalog-desc-gray, black);
     line-height: 18px;
     margin-bottom: 68px;
+    position: relative;
+}
+
+.footer-location iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 416px;
+    z-index: 1;
 }
 
 .footer-location .center {
@@ -729,6 +741,7 @@
     /*Не понимаю как заставить изменять положение маркера вместе с фоном при изменении ширины окна*/
     left: 60.8%;
     top: 16.8%;
+    z-index: 0;
 }
 
 .footer-location b {
@@ -753,6 +766,8 @@
     align-self: center;
     justify-content: start;
     padding: 49px 50px 47px 50px;
+    position: relative;
+    z-index: 2;
 }
 
 .adrr-wrapper p {
@@ -900,6 +915,10 @@
     top: 166px;
     display: none;
     z-index: 5;
+}
+
+.modal-show {
+    display: block;
 }
 
 .feedback-form {
@@ -1151,9 +1170,9 @@
     outline-style: none;
     border: 0;
     text-align: center;
-    width: 80px;
+    width: 50px;
     padding: 8px 15px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     margin-left: 10px;
     border-radius: 3px;
 }
@@ -1243,7 +1262,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .input-radio + label:hover::before,
-.input-radio + label:focus::before {
+.input-radio:focus + label::before {
     opacity: 1;
 }
 
@@ -1270,8 +1289,9 @@ input[type=number]::-webkit-outer-spin-button {
     background: url("../img/icons/checkbox-on.svg") no-repeat;
 }
 
+
 .input-checkbox + label:hover::before,
-.input-checkbox + label:focus::before {
+.input-checkbox:focus + label::before {
     opacity: 1;
 }
 
@@ -1417,11 +1437,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .catalog-item:hover,
-.catalog-item:focus {
+.catalog-item:focus,
+.catalog-item:focus-within {
     background-color: var(--dark-gray, gray);
     border-color: transparent;
     border-radius: 5px;
     box-shadow: 0px 6px 15px var(--catalog-shadow, gray);
+    outline-style: none;
 }
 
 .catalog-item img {
@@ -1454,7 +1476,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .catalog-item:hover .catalog-item-description,
-.catalog-item:focus .catalog-item-description {
+.catalog-item:focus .catalog-item-description,
+.catalog-item:focus-within .catalog-item-description {
     visibility: visible;
 }
 
