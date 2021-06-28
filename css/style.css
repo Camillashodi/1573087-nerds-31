@@ -110,9 +110,6 @@
   padding: 0 15px;
 }
 
-
-/*-----------------.btn-------------------------*/
-
 .btn {
   text-transform: uppercase;
   color: var(--white, white);
@@ -191,16 +188,10 @@
   color: var(--black-active);
 }
 
-
-/*----------------------------------- main-header -----------------------------*/
-
 .main-header {
   background-color: var(--basic-gray);
   padding-top: 50px;
 }
-
-
-/*---------- main-nav -------------*/
 
 .main-nav {
   font-size: 16px;
@@ -305,12 +296,6 @@
 .card-link:active::before {
   opacity: 1;
 }
-
-
-/*-------------------------------.wrapper----------------------------------------------*/
-
-
-/*-------------------.slider------------------------*/
 
 .slider {
   background-color: var(--basic-gray, gray);
@@ -453,9 +438,6 @@
   left: 5px;
 }
 
-
-/*--------------------.our-services---------------------------*/
-
 .our-services {
   background-color: transparent;
   border-bottom: 2px solid var(--basic-gray, gray);
@@ -540,9 +522,6 @@
   padding-left: 39px;
   padding-right: 40px;
 }
-
-
-/*-----------------------.company-desc----------------------------*/
 
 .company-desc {
   background-color: transparent;
@@ -690,9 +669,6 @@
   line-height: 18px;
 }
 
-
-/*-----------------.projects--------------------*/
-
 .projects {
   background-color: transparent;
   margin-bottom: 80px;
@@ -757,15 +733,9 @@
   opacity: 0.1;
 }
 
-
-/*-------------------------------.main-footer-------------------------------------------*/
-
 .main-footer {
   background-color: transparent;
 }
-
-
-/*-----------------.footer-location----------------------------*/
 
 .footer-location {
   text-align: left;
@@ -864,9 +834,6 @@
   padding-left: 44px;
   padding-right: 44px;
 }
-
-
-/*----------------------.footer-social-------------------------*/
 
 .footer-social {
   text-align: left;
@@ -989,9 +956,6 @@
 .social-btn:active::before {
   opacity: 0.3;
 }
-
-
-/*--------------------------.feedback-------------------------------------------*/
 
 .feedback {
   background-color: transparent;
@@ -1209,9 +1173,6 @@
   padding-right: 83px;
 }
 
-
-/*-------------------------------------.inner-page-------------------------------------*/
-
 .inner-page .main-header {
   padding-bottom: 74px;
 }
@@ -1240,9 +1201,6 @@
   grid-template-areas: "search-settings gap sorting" "search-settings gap catalog";
   padding-bottom: 56px;
 }
-
-
-/*-----------------.search-settings----------------------*/
 
 .search-settings {
   -ms-grid-row: 1;
@@ -1450,9 +1408,6 @@
   opacity: 0.1;
 }
 
-
-/*---------------------.sorting-------------------------*/
-
 .sorting {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -1586,7 +1541,6 @@
   border-bottom-color: var(--sorting-bage-active);
   opacity: 1;
 }
-/*----------------------.catalog----------------------------*/
 
 .catalog {
   -ms-grid-row: 2;
@@ -1790,9 +1744,6 @@
   border: 3px solid var(--page-border-gray, gray);
   outline-style: none;
 }
-
-
-/*-----------------------Animation---------------------------------*/
 
 @-webkit-keyframes anima-open {
   0% {
