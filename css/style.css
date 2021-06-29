@@ -58,6 +58,7 @@
   --gray-btn: #EEEEEE;
   --gray-hover-btn: #DFDFDF;
   --gray-active-btn: #D5D5D5;
+  --btn-active-shadow: rgba(0, 1, 1, 0.1);
   --social-btn: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
   --social-hover-btn: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
   --social-active-btn: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
@@ -126,6 +127,10 @@
   padding-bottom: 15px;
   display: inline-block;
   vertical-align: middle;
+}
+
+.btn:active {
+  box-shadow: inset 0px 3px 0px var(--btn-active-shadow);
 }
 
 .btn-red {
@@ -327,6 +332,9 @@
   -ms-grid-rows: minmax(430px, max-content);
   grid-template-rows: minmax(430px, -webkit-max-content);
   grid-template-rows: minmax(430px, max-content);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid transparent;
 }
 
 .slider-item {
@@ -370,6 +378,7 @@
   -ms-grid-row-align: end;
   align-self: end;
   z-index: 2;
+  padding-top: 75px;
 }
 
 .slider-wrapper p:first-child {
@@ -696,7 +705,7 @@
   display: grid;
 }
 
-.project-item:not(:last-child)::after {
+.project-item:not(:last-child):not(:nth-child(4n)):after {
   content: "";
   position: absolute;
   width: 2px;
@@ -802,15 +811,18 @@
   box-sizing: border-box;
   background-color: var(--white);
   min-height: 308px;
+  max-height: 400px;
+  width: 319px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: start;
-  padding: 49px 50px 47px 50px;
+  padding: 49px 33px 47px 50px;
   position: relative;
   z-index: 2;
+  overflow: auto;
 }
 
 .adrr-wrapper p {
@@ -833,6 +845,7 @@
 .adrr-wrapper .btn {
   padding-left: 44px;
   padding-right: 44px;
+  
 }
 
 .footer-social {
@@ -921,6 +934,7 @@
 
 .social-btn:active {
   background: var(--social-active-btn);
+  box-shadow: inset 0px 3px 0px var(--btn-active-shadow);
 }
 
 .vk-btn::before {
@@ -1618,6 +1632,8 @@
   align-self: center;
 }
 
+
+
 .catalog-item-description {
   background-color: var(--basic-gray, gray);
   text-align: center;
@@ -1629,6 +1645,13 @@
   min-height: 231px;
   visibility: hidden;
   border-radius: 0 0 5px 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-height: 578px;
+  overflow: auto;
+}
+
+.catalog-item-description-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1639,7 +1662,7 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding-top: 26px;
+  padding-top: 27px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
